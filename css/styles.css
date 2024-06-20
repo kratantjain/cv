@@ -95,6 +95,11 @@ padding: 50px 0 20px;
   float: left;
   margin-right: 10%;
 }
+.devops-img {
+  width: 25%;
+  float: left;
+  margin-right: 10%;
+}
 .btn {
   background: #11cdd4;
   background-image: -webkit-linear-gradient(top, #11cdd4,  #11999e);
