@@ -1,77 +1,65 @@
-# Kratant Jain's Resume
+# Kratant Jain — Portfolio CV
 
-This repository contains the resume data of Kratant Jain, a QA Automation Engineer with over 5 years of experience in developing and implementing test automation frameworks, performance testing, and Python development across various sectors, including Automotive, IT Services, and Cybersecurity.
+**Live site:** https://kratantjain.github.io/cv/
 
-## Table of Contents
+---
 
-- [About](#about)
-- [Contact Information](#contact-information)
-- [Work Experience](#work-experience)
-- [Education](#education)
-- [Skills](#skills)
-- [Certifications](#certifications)
-- [Achievements](#achievements)
-- [Personal Information](#personal-information)
-- [Interests and Hobbies](#interests-and-hobbies)
+## Repo Structure
 
-## About
+```
+/
+├── index.html              ← Main portfolio page
+├── style.css               ← Full premium dark stylesheet
+├── script.js               ← Interactions: scroll reveal, nav, counters
+├── images/
+│   └── profilepic-modified.png   ← Your existing profile photo (keep in place)
+└── README.md
+```
 
-Kratant Jain is a passionate and detail-oriented QA Automation Engineer with a strong background in Python, Robot Framework, JMeter, and other automation tools. He is skilled in streamlining testing processes and delivering efficient, reliable solutions. Kratant is a respectful self-motivator gifted at finding reliable solutions for software issues and thrives in cross-cultural, global teams, offering strong organizational skills and the ability to handle multiple projects simultaneously with a high degree of accuracy.
+---
 
-## Contact Information
+## Deployment
 
-- Address: Bengaluru, India 560066
-- Phone: 9760479001
-- Email: kratantjain@gmail.com
-- Website: [https://kratantjain.github.io/cv/](https://kratantjain.github.io/cv/)
-- LinkedIn: [https://www.linkedin.com/in/kratantjain/](https://www.linkedin.com/in/kratantjain/)
+This is a pure static site. No build step required.
 
-## Work Experience
+1. Clone or pull the repo
+2. Replace `index.html`, `style.css`, `script.js` with the new files
+3. Keep `images/profilepic-modified.png` in place (it is still referenced)
+4. Commit and push to `main` or `gh-pages` branch
+5. GitHub Pages will serve it automatically
 
-Kratant Jain's professional experience includes:
+---
 
-- **Sr. Product Engineer** at Harman Connected Services (Apr 2023 - Present)
-- **Product Engineer** at Harman Connected Services (Apr 2021 - Mar 2023)
-- **Programmer Analyst** at Cognizant Technology Solutions (Aug 2020 - Apr 2021)
-- **Programmer Analyst Trainee** at Cognizant Technology Solutions (Jul 2019 - Jul 2020)
-- **Intern** at Happiest Minds Technologies Pvt. Ltd. (Jun 2018 - Jul 2018)
+## Placeholders to fill manually
 
-For detailed information about each role, please refer to the [resume file](KRATANT_JAIN_Resume-1.pdf).
+| Location | What to check/update |
+|---|---|
+| `index.html` — meta `og:image` | Points to `images/profilepic-modified.png` — verify the path is correct after deploy |
+| `index.html` — Twitter username | `twitter.com/kratantjain` — update if your handle is different |
+| `images/profilepic-modified.png` | Keep the existing file. If you replace it with a higher-res photo, use square crop and same filename. |
+| `index.html` — GitHub link | `github.com/kratantjain` — correct as-is |
+| `index.html` — LinkedIn link | `linkedin.com/in/kratantjain` — correct as-is |
+| Impact metrics (`~75%`, `~90%`, `~87%`, `50+`) | These are approximate public-safe figures from your career document. Adjust only if your actual numbers have changed significantly. |
 
-## Education
+---
 
-- **B.Tech: Computer Science and Engineering** from Jaypee University of Engineering & Technology, Guna, Madhya Pradesh
+## Optional enhancements
 
-## Skills
+- **Favicon:** An inline SVG favicon is already embedded in the `<head>` (no file needed).
+- **Social preview image:** For better LinkedIn/Twitter link previews, create a 1200×630 PNG at `images/social-preview.png` and update the `og:image` tag.
+- **Custom domain:** Add a `CNAME` file at the repo root with your domain name if you set up a custom domain later.
 
-- **Programming Languages**: Python, Bash, PowerShell
-- **Frameworks and Libraries**: Robot Framework, Flask, Selenium, Pandas
-- **Tools and Technologies**: Jenkins, AWS, Jmeter, HiveMQ, Kafka, MongoDB, PostgreSQL, Grafana, Graylog
-- **Methodologies**: Requirements Analysis, Test Case Planning, Design, Development, and Execution, Process Automation, Troubleshooting
+---
 
-## Certifications
+## Confidentiality summary
 
-- Security White Belt - Security Journey (2024-01)
-- Security Yellow Belt - Security Journey (2023-09)
-- Robot Framework Level 2 from Udemy
-- Python and Flask Bootcamp: Create Websites using Flask! - Udemy
-- Jenkins - DevOps Jenkins Master from Udemy
-- CCNA training from Jaypee University, Guna
-- CEHv9 Training from Hacker School, Bengaluru
+The following content was intentionally generalized:
+- Internal framework and platform names replaced with generic descriptors ("proprietary CI/CD orchestration system", "internal automation platform", "developer CLI tool")
+- SDK product names not mentioned — described as "SDK regression testing" without product specifics
+- Internal milestone/release names not mentioned
+- Internal utility names not mentioned
+- Infrastructure topology described in safe scale terms (~8 machines, ~40 devices, ~50 nodes, ~50 engineers)
+- Impact metrics shared as approximate percentages (safe per your career document guidelines)
+- Client/product names within Sony/Harman not mentioned — only employer names used (safe for public CV)
 
-## Achievements
-
-- Awarded with the title "PASSION" for contribution in the CognizantWellington Journey towards excellence.
-- Received customer & delivery manager appreciation for developing an automation solution critical for project go-live.
-
-## Personal Information
-
-- Father's Name: Mr. Neelesh Kumar Jain
-- Date of Birth: 11/29/1997
-- Gender: Male
-- Nationality: Indian
-
-## Interests and Hobbies
-
-- Watching movies
-- Learning about new technologies
+Employer names included (Sony India Software Centre, Harman Connected Services, Harman India, Cognizant Technology Solutions, Happiest Minds Technologies) — these are standard public resume information.
