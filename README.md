@@ -58,7 +58,6 @@ The following content was intentionally generalized:
 - SDK product names not mentioned — described as "SDK regression testing" without product specifics
 - Internal milestone/release names not mentioned
 - Internal utility names not mentioned
-- Infrastructure topology described in safe scale terms (~8 machines, ~40 devices, ~50 nodes, ~50 engineers)
 - Impact metrics shared as approximate percentages (safe per your career document guidelines)
 - Client/product names within Sony/Harman not mentioned — only employer names used (safe for public CV)
 
