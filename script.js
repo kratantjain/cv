@@ -174,7 +174,13 @@
   }
 
   // ----------------------------------------------------------
-  // 6. Smooth scroll offset for fixed nav
+  // 6. Footer year
+  // ----------------------------------------------------------
+  var footerYear = document.getElementById('footer-year');
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+  // ----------------------------------------------------------
+  // 7. Smooth scroll offset for fixed nav
   //    Adjusts anchor scroll to not hide content under nav
   // ----------------------------------------------------------
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

@@ -2,63 +2,46 @@
 
 **Live site:** https://kratantjain.github.io/cv/
 
----
+Static single-page site served by GitHub Pages. No build step for the site itself.
 
-## Repo Structure
+## Repo structure
 
 ```
 /
-├── index.html              ← Main portfolio page
-├── style.css               ← Full premium dark stylesheet
-├── script.js               ← Interactions: scroll reveal, nav, counters
+├── index.html                  ← Portfolio page
+├── style.css                   ← Stylesheet
+├── script.js                   ← Nav, scroll reveal, impact counters, footer year
+├── favicon.ico                 ← Fallback icon (inline SVG favicon is primary)
 ├── images/
-│   └── profilepic-modified.png   ← Your existing profile photo (keep in place)
-└── README.md
+│   └── profilepic-modified.png ← Profile photo (also used for link previews)
+├── Kratant_Jain_Resume.pdf     ← Resume linked from the site
+├── Kratant_Jain_Resume.docx    ← Same resume, ATS-friendly Word format
+└── tools/
+    ├── resume.js               ← Single source for the resume (DOCX + HTML)
+    └── pdf.js                  ← Prints the HTML resume to PDF
 ```
 
----
+## Updating the resume
 
-## Deployment
+All resume content lives in the `R` object at the top of `tools/resume.js`, so the DOCX and PDF stay identical.
 
-This is a pure static site. No build step required.
+```bash
+cd tools
+npm install docx playwright-core
+node resume.js ../Kratant_Jain_Resume.docx resume.html
+node pdf.js resume.html ../Kratant_Jain_Resume.pdf /path/to/chromium
+```
 
-1. Clone or pull the repo
-2. Replace `index.html`, `style.css`, `script.js` with the new files
-3. Keep `images/profilepic-modified.png` in place (it is still referenced)
-4. Commit and push to `main` or `gh-pages` branch
-5. GitHub Pages will serve it automatically
+When you change the resume, make the same change in `index.html`.
 
----
+## Content rules for public versions
 
-## Placeholders to fill manually
-
-| Location | What to check/update |
-|---|---|
-| `index.html` — meta `og:image` | Points to `images/profilepic-modified.png` — verify the path is correct after deploy |
-| `index.html` — Twitter username | `twitter.com/kratantjain` — update if your handle is different |
-| `images/profilepic-modified.png` | Keep the existing file. If you replace it with a higher-res photo, use square crop and same filename. |
-| `index.html` — GitHub link | `github.com/kratantjain` — correct as-is |
-| `index.html` — LinkedIn link | `linkedin.com/in/kratantjain` — correct as-is |
-| Impact metrics (`~75%`, `~90%`, `~87%`, `50+`) | These are approximate public-safe figures from your career document. Adjust only if your actual numbers have changed significantly. |
-
----
-
-## Optional enhancements
-
-- **Favicon:** An inline SVG favicon is already embedded in the `<head>` (no file needed).
-- **Social preview image:** For better LinkedIn/Twitter link previews, create a 1200×630 PNG at `images/social-preview.png` and update the `og:image` tag.
-- **Custom domain:** Add a `CNAME` file at the repo root with your domain name if you set up a custom domain later.
-
----
-
-## Confidentiality summary
-
-The following content was intentionally generalized:
-- Internal framework and platform names replaced with generic descriptors ("proprietary CI/CD orchestration system", "internal automation platform", "developer CLI tool")
-- SDK product names not mentioned — described as "SDK regression testing" without product specifics
-- Internal milestone/release names not mentioned
-- Internal utility names not mentioned
-- Impact metrics shared as approximate percentages (safe per your career document guidelines)
-- Client/product names within Sony/Harman not mentioned — only employer names used (safe for public CV)
-
-Employer names included (Sony India Software Centre, Harman Connected Services, Harman India, Cognizant Technology Solutions, Happiest Minds Technologies) — these are standard public resume information.
+- Use exact titles and dates (they must match relieving letters):
+  - Sony India Software Centre — Technical Specialist, Jul 2024 – present
+  - Harman Connected Services Corporation India Pvt. Ltd. — Senior Test Engineer – Product Development, Apr 2023 – 22 Jul 2024; Product Engineer, 21 Apr 2021 – Mar 2023
+  - Cognizant Technology Solutions — Programmer Analyst, Aug 2020 – Apr 2021; Programmer Analyst Trainee, Jul 2019 – Jul 2020
+  - Happiest Minds Technologies — Intern, Cloud & Cybersecurity, Jun – Jul 2018
+- No internal Sony tool or milestone names. Describe them generically ("next-generation test automation framework", "device management service", "local CLI that mirrors CI execution", "a major SDK milestone").
+- SDK, devkits, Sony, and scale numbers (~300 libraries, ~250,000 test cases, ~40 devkits, ~8 PCs, 50+ engineers) are fine to share.
+- Say "test libraries", never "test suites".
+- The public resume leaves out the phone number.
